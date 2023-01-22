@@ -442,12 +442,13 @@ img {
 
 .footer-wrapper {
   display: flex;
-  gap: 120px;
+  /* gap: 120px; */
 }
 
 
 .footer-text {
   width: 264px;
+  margin-right: 120px;
 }
 
 
@@ -541,7 +542,7 @@ img {
   line-height: 24px;
   letter-spacing: 0.02em;
   color: #E7E9FC;
-  padding: 24px;
+  padding-left: 16px;
 }
 
 .footer-e-mail-input::placeholder {
@@ -731,17 +732,19 @@ img {
 
 
 .modal {
-
   position: absolute;
   width: 408px;
   height: 576px;
   padding: 24px;
-  background: #FCFCFC;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  padding-top: 72px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1) rotate(0);
+  background: #FCFCFC;
+
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
   transition: transform var(--duration-timing-function);
 }
 
@@ -752,10 +755,9 @@ img {
 
 
 .modal-close {
-  /* position: absolute;
+  position: absolute;
   top: 24px;
-  right: 24px; */
-  margin-left: auto;
+  right: 24px;
   width: 24px;
   height: 24px;
   display: flex;
@@ -770,12 +772,13 @@ img {
   transition:
     background var(--duration-timing-function),
     color var(--duration-timing-function);
-  margin-bottom: 24px;
 }
 
-.modal-close:hover {
+.modal-close:hover,
+.modal-close:focus {
   background: #404BBF;
   color: #FFFFFF;
+  outline-color: transparent;
 }
 
 .modal-close-icon {
@@ -794,6 +797,16 @@ img {
 }
 
 .modal-form {}
+
+.modal-label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.modal-label-comment {
+  display: block;
+  margin-bottom: 16px;
+}
 
 .modal-label-text {
   font-style: normal;
@@ -815,8 +828,7 @@ img {
   background-color: transparent;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  margin-bottom: 4px;
-  padding-left: 40px;
+  padding-left: 38px;
   transition:
     border var(--duration-timing-function),
     outline var(--duration-timing-function);
@@ -845,11 +857,9 @@ img {
   background-color: transparent;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  margin-bottom: 4px;
   padding: 8px 8px 8px 16px;
   resize: none;
   background: transparent;
-  margin-bottom: 16px;
   transition:
     border var(--duration-timing-function),
     outline var(--duration-timing-function);
@@ -922,6 +932,7 @@ img {
   background: #4D5AE5;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border-color: transparent;
   margin: 0 auto;
   outline-style: auto;
   color: #FFFFFF;
@@ -934,5 +945,4 @@ img {
 .modal-btn:hover,
 .modal-btn:focus {
   background: var(--ocean-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
